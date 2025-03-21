@@ -1,1 +1,9 @@
-{}
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/discover": "pages/discover.js",
+  "/": "pages/index.js",
+  "/albums/death-of-slim-shady": "pages/albums/death-of-slim-shady.js",
+  "/albums/chromakopia": "pages/albums/chromakopia.js"
+}

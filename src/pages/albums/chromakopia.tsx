@@ -1,16 +1,16 @@
 "use client";
 import {
-    AspectRatio,
-    Badge,
-    Box,
-    Container,
-    Divider,
-    Grid,
-    Heading,
-    HStack,
-    Image,
-    Text,
-    VStack
+  AspectRatio,
+  Badge,
+  Box,
+  Container,
+  Divider,
+  Grid,
+  Heading,
+  HStack,
+  Image,
+  Text,
+  VStack
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';

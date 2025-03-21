@@ -3,15 +3,15 @@ import NavigationCards from '@/components/Home/NavigationCards';
 import TrendingChart from '@/components/Home/TrendingChart';
 import SearchBar from '@/components/Search/SearchBar';
 import {
-    Box,
-    Button,
-    Container,
-    Flex,
-    Grid,
-    Heading,
-    Text,
-    useDisclosure,
-    VStack,
+  Box,
+  Button,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Text,
+  useDisclosure,
+  VStack,
 } from '@chakra-ui/react';
   
   export default function HomePage() {
@@ -77,3 +77,5 @@ import {
       </Box>
     );
   }
+
+
