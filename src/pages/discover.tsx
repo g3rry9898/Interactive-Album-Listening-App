@@ -1,21 +1,22 @@
 import {
-    Box,
-    Button,
-    Container,
-    Flex,
-    Heading,
-    Image,
-    SimpleGrid,
-    Skeleton // Add this import
-    ,
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Image,
+  SimpleGrid,
+  Skeleton // Add this import
+  ,
 
 
 
 
 
 
-    Text,
-    VStack
+
+  Text,
+  VStack
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useState } from 'react'; // Add this import
@@ -126,8 +127,9 @@ const featuredAlbums = [
                     />
                   }
                   onError={(e) => {
+                    const target = e.target as HTMLImageElement;
                     // Fallback image if the main image fails to load
-                    e.target.src = 'https://via.placeholder.com/400x400?text=Album+Cover';
+                    target.src = 'https://via.placeholder.com/400x400?text=Album+Cover';
                   }}
                 />
               </Box>

@@ -2,7 +2,7 @@ import { Box, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import MusicPlayer from '../Player/MusicPlayer';
 import Navbar from './Navbar';
-import Sidebar from './Sidebar';
+
 
 const MotionBox = motion(Box); // Framer Motion wrapper for animations
 
@@ -19,12 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     >
       <Navbar />
       <Flex>
-        <Sidebar
-          _hover={{
-            bg: 'gray.700',
-            cursor: 'pointer',
-          }}
-        />
+        
         <MotionBox
           as="main"
           flex="1"

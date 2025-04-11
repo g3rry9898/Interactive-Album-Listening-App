@@ -1,18 +1,18 @@
 import { CloseIcon, SearchIcon } from '@chakra-ui/icons';
 import {
-    Box,
-    Flex,
-    Icon,
-    IconButton,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    InputRightElement,
-    Kbd,
-    Spinner,
-    Text,
-    useColorModeValue,
-    VStack
+  Box,
+  Flex,
+  Icon,
+  IconButton,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  InputRightElement,
+  Kbd,
+  Spinner,
+  Text,
+  useColorModeValue,
+  VStack
 } from '@chakra-ui/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
@@ -24,7 +24,7 @@ import { FaFire, FaHistory } from 'react-icons/fa';
     const [query, setQuery] = useState('');
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const inputRef = useRef(null);
+    const inputRef = useRef<HTMLInputElement>(null);
     const searchRef = useRef(null);
   
     const bgColor = useColorModeValue('gray.800', 'gray.900');
@@ -43,6 +43,7 @@ import { FaFire, FaHistory } from 'react-icons/fa';
       'Best of Eminem',
       'Trending Hip Hop'
     ];
+    
   
     useEffect(() => {
       const handleKeyPress = (e: KeyboardEvent) => {

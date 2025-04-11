@@ -167,7 +167,7 @@ import { useState } from 'react';
         featuring: "GloRilla, Lil Wayne & Sexyy Red",
         spotifyId: "3tFed7YsjGnIfxeLEQwx3R?si=138ea255f8f24deb",
         hasVideo: false,
-        featuring: "Bizarre",
+        
         
         story: "'Sticky', featuring GloRilla, Lil Wayne, and Sexyy Red, is a star-studded collaboration that brings together powerful verses from each artist. The dynamic energy and impactful lyrics create a memorable and engaging track, emphasizing the strength found in unity and shared experiences.."
       },
@@ -223,6 +223,8 @@ import { useState } from 'react';
     const [imageLoading, setImageLoading] = useState(true);
     const [selectedTrack, setSelectedTrack] = useState(albumData.tracks[0]);
     const url = 'https://cdn.inspireuplift.com/uploads/images/seller_products/29661/iu_1721810691_1.jpg';
+    const MotionBox = motion(Box);
+    const MotionVStack = motion(VStack);
     
 
     
@@ -242,7 +244,7 @@ import { useState } from 'react';
     <Container maxW="container.xl" py={12}>
         <Grid templateColumns={{ base: "1fr", md: "300px 1fr" }} gap={8} mb={12}>
           {/* Album Cover */}
-          <Box
+          <MotionBox
             position="relative"
             role="group"
             as={motion.div}
@@ -314,10 +316,10 @@ import { useState } from 'react';
                 />
               </Box>
             </AspectRatio>
-          </Box>
+          </MotionBox>
   
           {/* Album Info */}
-          <VStack 
+          <MotionVStack 
             align="start" 
             spacing={4}
             as={motion.div}
@@ -338,7 +340,7 @@ import { useState } from 'react';
             <Text color="gray.300" fontSize="lg" lineHeight="tall">
               {albumData.description}
             </Text>
-          </VStack>
+          </MotionVStack>
         </Grid>
   
               {/* Album Teasers - Updated Section */}
@@ -562,7 +564,7 @@ import { useState } from 'react';
   </Box>
 </Box>
 {/* Album Analysis Section */}
-<Box 
+<MotionBox 
   mt={16} 
   as={motion.div}
   initial={{ opacity: 0, y: 20 }}
@@ -574,7 +576,7 @@ import { useState } from 'react';
   </Heading>
 
   {/* Overview */}
-  <Box 
+  <MotionBox 
     bg="whiteAlpha.50" 
     p={6} 
     borderRadius="xl" 
@@ -586,12 +588,12 @@ import { useState } from 'react';
     <Text color="gray.300" fontSize="lg" lineHeight="tall">
       {albumData.analysis.overview}
     </Text>
-  </Box>
+  </MotionBox>
 
   {/* Key Points */}
   <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6} mb={12}>
     {albumData.analysis.keyPoints.map((point, index) => (
-      <Box 
+      <MotionBox 
         key={point.title}
         bg="whiteAlpha.50"
         p={6}
@@ -611,7 +613,7 @@ import { useState } from 'react';
         <Text color="gray.300">
           {point.description}
         </Text>
-      </Box>
+      </MotionBox>
     ))}
   </Grid>
 
@@ -622,7 +624,7 @@ import { useState } from 'react';
     </Heading>
     <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={6}>
       {albumData.reviews.map((review, index) => (
-        <Box 
+        <MotionBox 
           key={review.id}
           bg="whiteAlpha.50"
           borderRadius="xl"
@@ -655,11 +657,11 @@ import { useState } from 'react';
               {review.channelName}
             </Text>
           </Box>
-        </Box>
+        </MotionBox>
       ))}
     </Grid>
   </Box>
-</Box>
+</MotionBox>
 
       </Container>
 

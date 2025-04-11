@@ -1,17 +1,18 @@
+import { auth } from '@/lib/firebase';
 import {
-  Button,
-  Icon,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-  useToast,
-  VStack
+    Button,
+    Modal,
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalHeader,
+    ModalOverlay,
+    useToast,
+    VStack
 } from '@chakra-ui/react';
-import { GoogleLogin } from 'react-google-login';
-import { FaGoogle } from 'react-icons/fa';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { useState } from 'react';
+import { FcGoogle } from 'react-icons/fc';
 
 interface LoginProps {
   isOpen: boolean;
@@ -20,29 +21,36 @@ interface LoginProps {
 
 export default function Login({ isOpen, onClose }: LoginProps) {
   const toast = useToast();
-  const clientId = '423440158487-sqbmb1fuqt4576l0hkhco1ovle5fldmo.apps.googleusercontent.com';
+  const [loading, setLoading] = useState(false);
 
-
-  const handleGoogleSuccess = (response: any) => {
-    toast({
-      title: 'Login Successful',
-      description: `Welcome, ${response.profileObj.name}!`,
-      status: 'success',
-      duration: 3000,
-    });
-    // Handle successful login, e.g., save user details or redirect
-    console.log('User Info:', response.profileObj);
-    onClose(); // Close the modal after successful login
-  };
-
-  const handleGoogleFailure = (error: any) => {
-    toast({
-      title: 'Login Failed',
-      description: 'An error occurred during Google Sign-In. Please try again.',
-      status: 'error',
-      duration: 3000,
-    });
-    console.error('Error:', error);
+  const handleGoogleSignIn = async () => {
+    setLoading(true);
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      
+      toast({
+        title: 'Welcome!',
+        description: 'Successfully signed in.',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      });
+      
+      onClose();
+    } catch (error: any) {
+      console.error('Sign in error:', error);
+      
+      toast({
+        title: 'Error signing in',
+        description: error.message,
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -53,23 +61,17 @@ export default function Login({ isOpen, onClose }: LoginProps) {
         <ModalCloseButton color="white" />
         <ModalBody pb={6}>
           <VStack spacing={4}>
-            <GoogleLogin
-              clientId={clientId}
-              render={(renderProps) => (
-                <Button
-                  w="full"
-                  leftIcon={<Icon as={FaGoogle} />}
-                  onClick={renderProps.onClick}
-                  disabled={renderProps.disabled}
-                  colorScheme="red"
-                >
-                  Continue with Google
-                </Button>
-              )}
-              onSuccess={handleGoogleSuccess}
-              onFailure={handleGoogleFailure}
-              cookiePolicy={'single_host_origin'}
-            />
+            <Button
+              onClick={handleGoogleSignIn}
+              isLoading={loading}
+              loadingText="Signing in..."
+              leftIcon={<FcGoogle />}
+              colorScheme="blue"
+              size="lg"
+              width="full"
+            >
+              Sign in with Google
+            </Button>
           </VStack>
         </ModalBody>
       </ModalContent>

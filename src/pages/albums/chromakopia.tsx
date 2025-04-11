@@ -14,6 +14,9 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+
+
+
 // Add more keyframe animation
   
   const albumData = {
@@ -80,12 +83,9 @@ import { useState } from 'react';
         // Add more BTS videos as needed
       ],
     albumTeasers: {
-        video1: {
-          url: "https://www.youtube.com/embed/dL6LM4DyzU8",
-          title: "Teasers"
-        },
         video: {
-            url:"https://www.youtube.com/embed/gkZ4dLMH-B8"
+            url:"https://www.youtube.com/embed/gkZ4dLMH-B8",
+            title: 'First teaser'
         },
         instagram: {
           // Instagram post URL example: https://www.instagram.com/p/POST_ID/
@@ -211,18 +211,16 @@ import { useState } from 'react';
     const [imageError, setImageError] = useState(false);
     const [imageLoading, setImageLoading] = useState(true);
     const [selectedTrack, setSelectedTrack] = useState(albumData.tracks[0]);
-  
-  
+    const MotionBox = motion(Box);
+    const MotionVStack = motion(VStack);
+
     return ( <Container maxW="container.xl" py={12}>
         <Grid templateColumns={{ base: "1fr", md: "300px 1fr" }} gap={8} mb={12}>
           {/* Album Cover */}
-          <Box
-            position="relative"
-            role="group"
-            as={motion.div}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+          <MotionBox
+            initial={{opacity: 0, scale: 0.9}}
+            animate={{opacity: 1, scale: 1}}
+            transition={{duration: 0.5}}
           >
             <AspectRatio ratio={1}>
               <Box position="relative">
@@ -288,10 +286,10 @@ import { useState } from 'react';
                 />
               </Box>
             </AspectRatio>
-          </Box>
+          </MotionBox>
   
           {/* Album Info */}
-          <VStack 
+          <MotionVStack 
             align="start" 
             spacing={4}
             as={motion.div}
@@ -312,7 +310,7 @@ import { useState } from 'react';
             <Text color="gray.300" fontSize="lg" lineHeight="tall">
               {albumData.description}
             </Text>
-          </VStack>
+          </MotionVStack>
         </Grid>
   
               {/* Album Teasers - Updated Section */}
@@ -534,7 +532,7 @@ import { useState } from 'react';
   </Box>
 </Box>
 {/* Album Analysis Section */}
-<Box 
+<MotionBox 
   mt={16} 
   as={motion.div}
   initial={{ opacity: 0, y: 20 }}
@@ -546,7 +544,7 @@ import { useState } from 'react';
   </Heading>
 
   {/* Overview */}
-  <Box 
+  <MotionBox 
     bg="whiteAlpha.50" 
     p={6} 
     borderRadius="xl" 
@@ -558,12 +556,12 @@ import { useState } from 'react';
     <Text color="gray.300" fontSize="lg" lineHeight="tall">
       {albumData.analysis.overview}
     </Text>
-  </Box>
+  </MotionBox>
 
   {/* Key Points */}
   <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6} mb={12}>
     {albumData.analysis.keyPoints.map((point, index) => (
-      <Box 
+      <MotionBox 
         key={point.title}
         bg="whiteAlpha.50"
         p={6}
@@ -583,7 +581,7 @@ import { useState } from 'react';
         <Text color="gray.300">
           {point.description}
         </Text>
-      </Box>
+      </MotionBox>
     ))}
   </Grid>
 
@@ -594,7 +592,7 @@ import { useState } from 'react';
     </Heading>
     <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={6}>
       {albumData.reviews.map((review, index) => (
-        <Box 
+        <MotionBox 
           key={review.id}
           bg="whiteAlpha.50"
           borderRadius="xl"
@@ -627,11 +625,11 @@ import { useState } from 'react';
               {review.channelName}
             </Text>
           </Box>
-        </Box>
+        </MotionBox>
       ))}
     </Grid>
   </Box>
-</Box>
+</MotionBox>
 
       </Container>
             

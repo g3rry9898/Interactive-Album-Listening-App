@@ -2,14 +2,14 @@ import Layout from '@/components/Layout/Layout';
 import { useAuth } from '@/context/AuthContext';
 import ProtectedRoute from '@/pages/Auth/ProtectedRoute';
 import {
-    Avatar,
-    Box,
-    Button,
-    Container,
-    Heading,
-    Text,
-    useToast,
-    VStack,
+  Avatar,
+  Box,
+  Button,
+  Container,
+  Heading,
+  Text,
+  useToast,
+  VStack,
 } from '@chakra-ui/react';
 
 export default function Profile() {
@@ -25,10 +25,11 @@ export default function Profile() {
         duration: 3000,
         isClosable: true,
       });
-    } catch (error) {
+    } catch (error: unknown) {
+      const err = error as Error;
       toast({
         title: 'Error signing out',
-        description: error.message,
+        description: err.message,
         status: 'error',
         duration: 3000,
         isClosable: true,

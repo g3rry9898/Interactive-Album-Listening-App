@@ -1,8 +1,6 @@
 "use strict";
 exports.__esModule = true;
 var react_1 = require("@chakra-ui/react");
-var react_google_login_1 = require("react-google-login");
-var fa_1 = require("react-icons/fa");
 function Login(_a) {
     var isOpen = _a.isOpen, onClose = _a.onClose;
     var toast = react_1.useToast();
@@ -33,7 +31,6 @@ function Login(_a) {
             React.createElement(react_1.ModalHeader, { color: "white" }, "Login / Sign Up"),
             React.createElement(react_1.ModalCloseButton, { color: "white" }),
             React.createElement(react_1.ModalBody, { pb: 6 },
-                React.createElement(react_1.VStack, { spacing: 4 },
-                    React.createElement(react_google_login_1.GoogleLogin, { clientId: clientId, render: function (renderProps) { return (React.createElement(react_1.Button, { w: "full", leftIcon: React.createElement(react_1.Icon, { as: fa_1.FaGoogle }), onClick: renderProps.onClick, disabled: renderProps.disabled, colorScheme: "red" }, "Continue with Google")); }, onSuccess: handleGoogleSuccess, onFailure: handleGoogleFailure, cookiePolicy: 'single_host_origin' }))))));
+                React.createElement(react_1.VStack, { spacing: 4 })))));
 }
 exports["default"] = Login;
