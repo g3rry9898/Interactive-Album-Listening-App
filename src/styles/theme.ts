@@ -1,44 +1,48 @@
-import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
-
-const config: ThemeConfig = {
-  initialColorMode: 'dark',
-  useSystemColorMode: false,
-};
+import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
-  config,
-  fonts: {
-    heading: 'Playfair Display, serif',
-    body: 'Poppins, sans-serif',
+  styles: {
+    global: {
+      body: {
+        bg: 'gray.900',
+        color: 'white',
+      },
+    },
   },
   colors: {
     brand: {
-      primary: '#2A2D34',
-      accent: '#7C3AED',
-      text: {
-        primary: '#F3F4F6',
-        secondary: '#9CA3AF',
-      }
+      50: '#f5f3ff',
+      100: '#ede9fe',
+      200: '#ddd6fe',
+      300: '#c4b5fd',
+      400: '#a78bfa',
+      500: '#8b5cf6',
+      600: '#7c3aed',
+      700: '#6d28d9',
+      800: '#5b21b6',
+      900: '#4c1d95',
     },
   },
   components: {
     Button: {
       baseStyle: {
-        borderRadius: 'lg',
+        fontWeight: 'bold',
+        borderRadius: 'md',
       },
       variants: {
         solid: {
-          bg: 'purple.500',
+          bg: 'brand.600',
           color: 'white',
           _hover: {
-            bg: 'purple.600',
+            bg: 'brand.700',
           },
         },
         outline: {
-          borderColor: 'purple.500',
-          color: 'purple.500',
+          borderColor: 'brand.600',
+          color: 'brand.600',
           _hover: {
-            bg: 'whiteAlpha.100',
+            bg: 'brand.600',
+            color: 'white',
           },
         },
       },
@@ -50,14 +54,6 @@ const theme = extendTheme({
         },
       },
     },
-  },
-  styles: {
-    global: (props: any) => ({
-      body: {
-        bg: 'gray.900',
-        color: 'white',
-      },
-    }),
   },
 });
 
