@@ -9,6 +9,7 @@ import {
     Heading,
     HStack,
     Image,
+    SimpleGrid,
     Text,
     useToast,
     VStack
@@ -61,7 +62,7 @@ const albumData = {
       spotifyId: "0nj9Bq5sHDiTxSHunhgkFb",
       hasVideo: true,
       videoUrl: "https://www.youtube.com/embed/fuV4yQWdn_4",
-      story: "Finalyyy! Let's Go !Everybody has anticpateley been waiting for this track after it was snipped at the Not Like Us Music video the song had already gone iral without the full version being out"
+      story: "Finally! Let's Go! Everybody has anticipated this track after it was snipped at the Not Like Us Music video. The song had already gone viral without the full version being out."
     },
     {
       id: 3,
@@ -71,6 +72,62 @@ const albumData = {
       hasVideo: true,
       videoUrl: "https://www.youtube.com/embed/sNY_2TEmzho",
       story: "A powerful collaboration with SZA that explores themes of identity and self-discovery."
+    },
+    {
+      id: 4,
+      title: "Man at the Garden",
+      spotifyId: "5ho7VSXSmI2KM2nDjcnLyz",
+      story: "A reflective track that delves into the complexities of fame and personal growth."
+    },
+    {
+      id: 5,
+      title: "Hey Now",
+      featuring: "Roddy Ricch",
+      spotifyId: "5S8VwnB4sLi6W0lYTWYylu",
+      story: "A high-energy collaboration with Roddy Ricch that showcases their chemistry and lyrical prowess."
+    },
+    {
+      id: 6,
+      title: "Reincarnated",
+      spotifyId: "0RgjEkSbeuStKfT2Pa4Zai",
+      story: "A deep dive into themes of rebirth and transformation, featuring Kendrick's signature storytelling."
+    },
+    {
+      id: 7,
+      title: "TV Off",
+      spotifyId: "0aB0v4027ukVziUGwVGYpG",
+      story: "A commentary on media consumption and its impact on society, delivered with Kendrick's unique perspective."
+    },
+    {
+      id: 8,
+      title: "Dodger Blue",
+      spotifyId: "4K1Pg0FLno1ltzX3jeqT83",
+      story: "An ode to Los Angeles and its cultural significance, blending personal experiences with broader social commentary."
+    },
+    {
+      id: 9,
+      title: "Peekaboo",
+      featuring: "aZ cHIKE",
+      spotifyId: "2Uts1QFB4u2YNIMiqcb4de",
+      story: "A playful yet profound track featuring aZ cHIKE, exploring themes of visibility and authenticity."
+    },
+    {
+      id: 10,
+      title: "Heart Pt. 6",
+      spotifyId: "1SGvjfc85yzqKXsfKcCxn2",
+      story: "The latest installment in Kendrick's Heart series, continuing his exploration of emotional vulnerability and growth."
+    },
+    {
+      id: 11,
+      title: "GNX",
+      spotifyId: "3aZptNYC6Z1YoumeqZcDcQ",
+      story: "The title track that encapsulates the album's themes and serves as its emotional centerpiece."
+    },
+    {
+      id: 12,
+      title: "Gloria",
+      spotifyId: "0wgOhYnqZKjOHr6bmdz0aN",
+      story: "A triumphant closing track that celebrates perseverance and the journey of self-discovery."
     }
   ],
   albumTeasers: {
@@ -78,6 +135,14 @@ const albumData = {
       {
         url: "https://www.youtube.com/embed/D7liwdjvhWc",
         title: "Album Trailer"
+      },
+      {
+        url: "https://www.youtube.com/embed/fuV4yQWdn_4",
+        title: "Squabble Up Music Video"
+      },
+      {
+        url: "https://www.youtube.com/embed/sNY_2TEmzho",
+        title: "Luther Music Video"
       }
     ]
   },
@@ -438,11 +503,117 @@ export default function GNXAlbum() {
                         </AspectRatio>
                       </Box>
                     )}
+                    {/* Story */}
+                    <Box w="100%" color="gray.300" fontSize="sm" lineHeight="tall">
+                      {track.story}
+                    </Box>
                   </VStack>
                 </Grid>
               </Box>
             ))}
           </VStack>
+        </Box>
+
+        {/* Analysis Section */}
+        <Box mt={12}>
+          <Heading size="xl" color="white" mb={6}>
+            Album Analysis
+          </Heading>
+          <Box bg="gray.800" p={6} borderRadius="lg">
+            <Text color="gray.300" fontSize="lg" mb={4}>
+              {albumData.analysis.overview}
+            </Text>
+            <VStack spacing={4} align="start">
+              {albumData.analysis.keyPoints.map((point, index) => (
+                <Box key={index} w="100%">
+                  <Text color="white" fontWeight="bold" mb={2}>
+                    {point.title}
+                  </Text>
+                  <Text color="gray.300">
+                    {point.description}
+                  </Text>
+                </Box>
+              ))}
+            </VStack>
+          </Box>
+        </Box>
+
+        {/* Reviews Section */}
+        <Box mt={12}>
+          <Heading size="xl" color="white" mb={6}>
+            Reviews
+          </Heading>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+            {albumData.reviews.map((review) => (
+              <Box key={review.id} bg="gray.800" p={6} borderRadius="lg">
+                <AspectRatio ratio={16/9} mb={4}>
+                  <iframe
+                    src={review.videoUrl}
+                    title={review.reviewer}
+                    allowFullScreen
+                  />
+                </AspectRatio>
+                <Text color="white" fontWeight="bold">
+                  {review.reviewer}
+                </Text>
+                <Text color="gray.400">
+                  {review.channelName}
+                </Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+
+        {/* Concerts Section */}
+        <Box mt={12}>
+          <Heading size="xl" color="white" mb={6}>
+            Concerts
+          </Heading>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+            {albumData.concerts.map((concert) => (
+              <Box key={concert.id} bg="gray.800" p={6} borderRadius="lg">
+                <AspectRatio ratio={16/9} mb={4}>
+                  <iframe
+                    src={concert.videoUrl}
+                    title={concert.title}
+                    allowFullScreen
+                  />
+                </AspectRatio>
+                <Text color="white" fontWeight="bold">
+                  {concert.title}
+                </Text>
+                <Text color="gray.400">
+                  {concert.venue} - {concert.date}
+                </Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+
+        {/* Behind the Scenes Section */}
+        <Box mt={12}>
+          <Heading size="xl" color="white" mb={6}>
+            Behind the Scenes
+          </Heading>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+            {albumData.behindTheScenes.map((bts) => (
+              <Box key={bts.id} bg="gray.800" p={6} borderRadius="lg">
+                <AspectRatio ratio={16/9} mb={4}>
+                  <iframe
+                    src={bts.videoUrl}
+                    title={bts.title}
+                    allowFullScreen
+                  />
+                </AspectRatio>
+                <Text color="white" fontWeight="bold">
+                  {bts.title}
+                </Text>
+                <Text color="gray.400">
+                  {bts.description}
+                </Text>
+              </Box>
+            ))}
+          </SimpleGrid>
         </Box>
       </Container>
     </Box>

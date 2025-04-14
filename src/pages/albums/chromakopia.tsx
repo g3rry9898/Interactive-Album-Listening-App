@@ -215,22 +215,22 @@ import { FaArrowLeft, FaForward, FaPlay } from 'react-icons/fa';
         id: 12,
         title: "Like Him",
         featuring: "Lola Young",
-        spotifyId: "your_spotify_track_id",
+        spotifyId: "6jbYpRPTEFl1HFKHk1IC0m",
       story: "'Like Him', featuring Lola Young, celebrates identity and individuality. This track explores the importance of staying true to oneself."
       },
       {
         id: 13,
         title: "Balloon",
         featuring: "Doechii",
-        spotifyId: "your_spotify_track_id",
+        spotifyId: "35D1RA5uVFVhMc1qX80TaQ",
       story: "'Balloon', with Doechii, adds a whimsical touch to the album. The playful lyrics and airy beat create a light and fun listening experience."
       },
       {
         id: 14,
         title: "I Hope You Find Your Way Home",
-        spotifyId: "your_spotify_track_id",
-        hasVideo: true,
-        videoUrl: "your_video_url",
+        spotifyId: "3nyJU03wxMST5SHPMDE3Y1",
+        hasVideo: false,
+        
       story: "The album closes with 'I Hope You Find Your Way Home', a heartfelt and reflective track that leaves listeners with a sense of closure and introspection."
     }
   ],

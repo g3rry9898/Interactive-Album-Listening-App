@@ -1,25 +1,25 @@
 import {
-  AspectRatio,
-  Badge,
-  Box,
-  Button,
-  Container,
-  Flex,
-  Grid,
-  Heading,
-  HStack,
-  Icon,
-  IconButton,
-  Image,
-  Input,
-  Progress,
-  Select,
-  SimpleGrid,
-  Text,
-  Tooltip,
-  useBreakpointValue,
-  useToast,
-  VStack
+    AspectRatio,
+    Badge,
+    Box,
+    Button,
+    Container,
+    Flex,
+    Grid,
+    Heading,
+    HStack,
+    Icon,
+    IconButton,
+    Image,
+    Input,
+    Progress,
+    Select,
+    SimpleGrid,
+    Text,
+    Tooltip,
+    useBreakpointValue,
+    useToast,
+    VStack
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -100,7 +100,7 @@ const mockAlbums = [
   {
     id: '5',
     title: 'I AM MUSIC',
-    artist: 'Lil Durk',
+    artist: 'PLAYBOI CARTI',
     cover: 'https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F84387c03968c8d51fd8be652624f112a.1000x1000x1.png',
     genre: 'Hip-Hop',
     year: '2024',
@@ -243,13 +243,13 @@ const categories = [
     };
   
     return (
-    <Box minH="100vh" bg="gray.900" py={8}>
+    <Box minH="100vh" bg="green.900" py={8}>
       <Container maxW="container.xl">
         {/* Header */}
         <VStack spacing={8} align="stretch" mb={12}>
           <Heading
             size="2xl"
-            bgGradient="linear(to-r, purple.400, pink.400)"
+            bgGradient="linear(to-r, green.400, teal.400)"
             bgClip="text"
           >
             Discover Albums
@@ -269,7 +269,7 @@ const categories = [
                 bg="gray.800"
                 borderColor="gray.700"
                 color="white"
-                _focus={{ borderColor: 'purple.400' }}
+                _focus={{ borderColor: 'green.400' }}
               />
             </HStack>
             <HStack>
@@ -280,7 +280,7 @@ const categories = [
                 bg="gray.800"
                 borderColor="gray.700"
                 color="white"
-                _focus={{ borderColor: 'purple.400' }}
+                _focus={{ borderColor: 'green.400' }}
               >
                 {genres.map(genre => (
                   <option key={genre} value={genre}>
@@ -297,7 +297,7 @@ const categories = [
                 bg="gray.800"
                 borderColor="gray.700"
                 color="white"
-                _focus={{ borderColor: 'purple.400' }}
+                _focus={{ borderColor: 'green.400' }}
               >
                 {years.map(year => (
                   <option key={year} value={year}>
@@ -350,7 +350,7 @@ const categories = [
                   p={6}
                 >
                   <VStack align="start" spacing={2}>
-                    <Badge colorScheme="purple" px={2} py={1}>
+                    <Badge colorScheme="green" px={2} py={1}>
                       {album.genre}
                     </Badge>
                     <Heading size="md" color="white">
@@ -372,7 +372,7 @@ const categories = [
                   </VStack>
                   <VStack align="start" spacing={2}>
                     <HStack spacing={2}>
-                      <Icon as={FaMusic} color="purple.400" />
+                      <Icon as={FaMusic} color="green.400" />
                       <Text color="gray.400" fontSize="sm">
                         {album.plays} plays
                       </Text>
@@ -380,7 +380,7 @@ const categories = [
                     <Progress 
                       value={album.rating * 20} 
                       size="sm" 
-                      colorScheme="purple"
+                      colorScheme="green"
                       borderRadius="full"
                     />
                     <HStack spacing={4} mt={4}>
@@ -388,7 +388,7 @@ const categories = [
                         <IconButton
                           aria-label="Play album"
                           icon={<Icon as={isPlaying ? FaPause : FaPlay} />}
-                          colorScheme="purple"
+                          colorScheme="green"
                           size="lg"
                           onClick={(e) => {
                             e.stopPropagation();
@@ -402,7 +402,7 @@ const categories = [
                           icon={<Icon as={FaHeart} />}
                           variant="ghost"
                           color="white"
-                          _hover={{ color: 'pink.400' }}
+                          _hover={{ color: 'teal.400' }}
                           onClick={(e) => {
                             e.stopPropagation();
                             handleFavorite(album.id);
@@ -415,7 +415,7 @@ const categories = [
                           icon={<Icon as={FaShare} />}
                           variant="ghost"
                           color="white"
-                          _hover={{ color: 'purple.400' }}
+                          _hover={{ color: 'green.400' }}
                         />
                       </Tooltip>
                       <Tooltip label="More options">
@@ -424,7 +424,7 @@ const categories = [
                           icon={<Icon as={FaEllipsisH} />}
                           variant="ghost"
                           color="white"
-                          _hover={{ color: 'purple.400' }}
+                          _hover={{ color: 'green.400' }}
                         />
                       </Tooltip>
                     </HStack>
@@ -432,7 +432,7 @@ const categories = [
                 </Flex>
               </Box>
               <Box p={6}>
-                <Badge colorScheme="purple" mb={2}>
+                <Badge colorScheme="green" mb={2}>
                   {album.genre}
                 </Badge>
                 <Heading size="md" color="white" mb={2}>
@@ -519,7 +519,7 @@ const categories = [
                           _groupHover={{ opacity: 1 }}
                         >
                           <Button
-                            colorScheme="purple"
+                            colorScheme="green"
                             size="lg"
                             onClick={(e) => {
                               e.stopPropagation();
@@ -549,7 +549,7 @@ const categories = [
                         position="absolute"
                         inset={-2}
                         borderRadius="xl"
-                        bg="linear-gradient(45deg, #FF0080, #7928CA, #FF0080)"
+                        bg="linear-gradient(45deg, #38A169, #319795, #38A169)"
                         opacity={0}
                         transition="opacity 0.3s"
                         _groupHover={{ opacity: 0.5 }}
@@ -645,7 +645,7 @@ const categories = [
                         position="absolute"
                         inset={-2}
                         borderRadius="xl"
-                        bg="linear-gradient(45deg, #FF0080, #7928CA, #FF0080)"
+                        bg="linear-gradient(45deg, #38A169, #319795, #38A169)"
                         opacity={0}
                         transition="opacity 0.3s"
                         _groupHover={{ opacity: 0.5 }}

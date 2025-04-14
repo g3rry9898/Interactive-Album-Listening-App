@@ -1,19 +1,19 @@
 "use client";
 import {
-    AspectRatio,
-    Box,
-    Button,
-    Container,
-    Divider,
-    Grid,
-    Heading,
-    HStack,
-    Icon,
-    Image,
-    Text,
-    useDisclosure,
-    useToast,
-    VStack
+  AspectRatio,
+  Box,
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Heading,
+  HStack,
+  Icon,
+  Image,
+  Text,
+  useDisclosure,
+  useToast,
+  VStack
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -29,7 +29,7 @@ const albumData = {
   year: '2024',
   duration: '45:00',
   tracks: 17,
-  description: 'Future and Metro Boomin reunite for their highly anticipated collaborative album "We Don\'t Trust You". The project showcases their signature dark, atmospheric production and Future\'s distinctive flow, creating a cohesive body of work that pushes the boundaries of modern trap music.',
+  description: 'Future and Metro Boomin’s We Don’t Trust You was already a beast of an album, but Kendrick’s feature on Like That turned it into a full-blown battlefield. That infamous line, “Motherf*** the big three, it’s just big me,” wasn’t just a mic drop—it was a grenade. Kendrick’s verse reignited the simmering tensions with Drake and J. Cole, dragging the whole rap world into the drama. The track’s fire production and Kendrick’s lyrical savagery made it the album’s standout moment, overshadowing everything else and leaving fans screaming, “Did he just say that?!” Classic Kendrick—always the disruptor.',
   rating: 4.7,
   plays: '15M',
   releaseDate: 'March 22, 2024',
@@ -92,14 +92,14 @@ const albumData = {
       id: 1,
       reviewer: 'Fantano',
       channelName: 'theneedledrop',
-      videoUrl: 'https://www.youtube.com/embed/your_video_id',
+      videoUrl: 'https://www.youtube.com/embed/d_S8aerZNfg',
       thumbnail: '/images/reviews/fantano.jpg'
     },
     {
       id: 2,
-      reviewer: 'Professor Skye',
-      channelName: 'Professor Skye\'s Record Review',
-      videoUrl: 'https://www.youtube.com/embed/your_video_id',
+      reviewer: 'NFR PODCAST',
+      channelName: 'NFR PODCAST',
+      videoUrl: 'https://www.youtube.com/embed/MrKUg474Ye8',
       thumbnail: '/images/reviews/deepcuts.jpg'
     }
   ],
@@ -109,7 +109,7 @@ const albumData = {
       title: 'We Don\'t Trust You Tour 2024',
       venue: 'State Farm Arena, Atlanta',
       date: '2024',
-      videoUrl: 'https://www.youtube.com/embed/your_video_id',
+      videoUrl: 'https://www.youtube.com/embed/qgxvQkCHQGg',
       thumbnail: '/images/concerts/atlanta.jpg'
     }
   ],
@@ -125,25 +125,117 @@ const albumData = {
   trackList: [
     {
       id: 1,
-      title: "Type Shit",
-      featuring: "Travis Scott, Playboi Carti",
-      spotifyId: "your_spotify_id",
-      hasVideo: true,
-      videoUrl: "https://youtube.com/embed/your_video_id",
-      story: "The opening track sets the tone with Future and Metro\'s signature dark, atmospheric production."
+      title: "We Don't Trust You",
+      spotifyId: "1pnDvUuAEd6z8bKEsbAjk1",
+      hasVideo: false,
+      story: "The title track sets the tone for the album, introducing the themes of loyalty and trust."
     },
     {
       id: 2,
-      title: "Like That",
-      featuring: "Kendrick Lamar",
-      spotifyId: "your_spotify_id",
-      story: "A standout track featuring Kendrick Lamar, showcasing their chemistry over Metro\'s production."
+      title: "Young Metro",
+      featuring: "The Weeknd",
+      spotifyId: "3OxL6MuctgZp1e0zxoAZhH",
+      hasVideo:true,
+      videoUrl:"https://www.youtube.com/embed/-kSAvHlXRUs",
+      story: "A collaboration with The Weeknd that blends Future's trap sound with The Weeknd's signature R&B style."
     },
     {
       id: 3,
-      title: "Magic Don Juan",
-      spotifyId: "your_spotify_id",
-      story: "Future reflects on his journey and success over Metro\'s signature dark production."
+      title: "Ice Attack",
+      spotifyId: "70ToiXlzl8N1EgfC07ZcZE",
+      story: "A hard-hitting track showcasing Metro's production prowess and Future's distinctive flow."
+    },
+    {
+      id: 4,
+      title: "Type Shit",
+      featuring: "Travis Scott, Playboi Carti",
+      spotifyId: "28drn6tQo95MRvO0jQEo5C",
+      hasVideo: true,
+      videoUrl: "https://www.youtube.com/embed/I0fgkcTbBoI",
+      story: "A star-studded collaboration featuring Travis Scott and Playboi Carti, bringing together three of trap music's most influential voices."
+    },
+    {
+      id: 5,
+      title: "Claustrophobic",
+      spotifyId: "57ELn9TPDIhrpl0dasS465",
+      story: "An introspective track that delves into personal struggles and paranoia."
+    },
+    {
+      id: 6,
+      title: "Like That",
+      featuring: "Kendrick Lamar",
+      hasVideo:true,
+      videoUrl:"https://www.youtube.com/embed/NYmIs3YLPFE",
+      spotifyId: "2tudvzsrR56uom6smgOcSf",
+      story: "Like That didn’t just shake the table, it flipped the whole damn thing over. When Kendrick dropped the line, “Motherf*** the big three, it’s just big me,” he basically declared war on Drake and J. Cole, sparking one of the wildest rap beefs in recent history2. That single lyric turned the industry upside down, with diss tracks flying left and right and fans picking sides like it was a hip-hop Hunger Games. Kendrick wasn’t playing—he came for the crown, and let’s be real, he made it look easy.."
+    },
+    {
+      id: 7,
+      title: "Slimed In",
+      spotifyId: "2GLWhy9iiO1wrLUF5l4FtJ",
+      story: "A track that embodies the dark, atmospheric production style that Metro Boomin is known for."
+    },
+    {
+      id: 8,
+      title: "Magic Don Juan (Princess Diana)",
+      spotifyId: "7pBcryEKcUEaWHwAu1wUyP",
+      story: "A track that showcases Future's unique storytelling ability and Metro's innovative production."
+    },
+    {
+      id: 9,
+      title: "Cinderella",
+      featuring: "Travis Scott",
+      spotifyId: "0hKtu53OlIFXVuYkZwcn3o",
+      story: "Another collaboration with Travis Scott that creates a dreamy, atmospheric vibe."
+    },
+    {
+      id: 10,
+      title: "Runnin Outta Time",
+      spotifyId: "4q7y1JFDBJSBSLqXVgcI51",
+      story: "A reflective track about the pressures of success and time."
+    },
+    {
+      id: 11,
+      title: "Fried (She a Vibe)",
+      spotifyId: "28xOPIPw0joNPwYd0asIT5",
+      story: "A track that brings Future's signature style over Metro's hypnotic production."
+    },
+    {
+      id: 12,
+      title: "Ain't No Love",
+      spotifyId: "72qABvaqn3TP6drO2tByA6",
+      story: "An emotional track exploring themes of trust and relationships."
+    },
+    {
+      id: 13,
+      title: "Everyday Hustle",
+      featuring: "Rick Ross",
+      spotifyId: "3Vg7nPYlOrCkcV1abKbRQ1",
+      story: "A collaboration with Rick Ross that celebrates success and perseverance."
+    },
+    {
+      id: 14,
+      title: "GTA",
+      spotifyId: "4XF9fk0STp9hx8xn5Suwpz",
+      story: "A high-energy track with video game references and street life themes."
+    },
+    {
+      id: 15,
+      title: "Seen it All",
+      spotifyId: "5imsnhkfPCm3wajS9ksb21",
+      story: "A reflective track about experiences and growth in the industry."
+    },
+    {
+      id: 16,
+      title: "WTFYM",
+      spotifyId: "1xwvjqcwflD2NEqRCNcCo2",
+      story: "A confident track with Future's signature braggadocious style."
+    },
+    {
+      id: 17,
+      title: "Where My Twin @",
+      spotifyId: "30TcFxtFyju8isK6Hjo9KY",
+      story: "The album closer that speaks to loyalty and brotherhood."
     }
   ],
   albumTeasers: {
@@ -154,11 +246,11 @@ const albumData = {
       },
       {
         url: "https://www.youtube.com/embed/OyoTzTWDn_M",
-        title: "Type Shit Music Video"
+        title: "Traile2"
       }
     ],
     instagram: {
-      url: "https://www.instagram.com/p/your_post_id",
+      url: "https://www.instagram.com/p/C4y3qgrv8If/",
       title: "Album Announcement Post"
     }
   },

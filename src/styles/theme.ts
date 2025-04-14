@@ -4,23 +4,23 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'gray.900',
+        bg: 'green.900',
         color: 'white',
       },
     },
   },
   colors: {
     brand: {
-      50: '#f5f3ff',
-      100: '#ede9fe',
-      200: '#ddd6fe',
-      300: '#c4b5fd',
-      400: '#a78bfa',
-      500: '#8b5cf6',
-      600: '#7c3aed',
-      700: '#6d28d9',
-      800: '#5b21b6',
-      900: '#4c1d95',
+      50: '#f0fff4',
+      100: '#c6f6d5',
+      200: '#9ae6b4',
+      300: '#68d391',
+      400: '#48bb78',
+      500: '#38a169',
+      600: '#2f855a',
+      700: '#276749',
+      800: '#22543d',
+      900: '#1c4532',
     },
   },
   components: {

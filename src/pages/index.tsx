@@ -74,8 +74,8 @@ export default function Home() {
   const router = useRouter();
   const toast = useToast();
   const bgGradient = useColorModeValue(
-    'linear(to-r, purple.500, pink.500)',
-    'linear(to-r, purple.400, pink.400)'
+    'linear(to-r, green.500, teal.500)',
+    'linear(to-r, green.400, teal.400)'
   );
   const isMobile = useBreakpointValue({ base: true, md: false });
 
@@ -109,7 +109,8 @@ export default function Home() {
         left={0}
         right={0}
         bottom={0}
-        bg="blackAlpha.800"
+        bg="green.900"
+        opacity={0.8}
         zIndex={0}
       />
       <Container maxW="container.xl" py={12} position="relative" zIndex={1}>
@@ -229,7 +230,7 @@ export default function Home() {
               />
             </AspectRatio>
           </MotionBox>
-        </Box>
+          </Box>
         </Container>
   
         {/* Login Modal */}

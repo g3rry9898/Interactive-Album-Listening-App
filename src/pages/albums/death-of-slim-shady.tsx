@@ -185,11 +185,10 @@ const albumData: AlbumData = {
           title: "Album Announcement Post"
         }
       }, 
-    tracks: [  
+    tracks: [
       {
         id: 1,
         title: "Rennaisaince",
-        featuring: "Daniel Caesar",
         spotifyId: "55u5QIlEuzCipJBtZPdJio?si=63ef172760984ac0",
         hasVideo: false,
       story: "Alright, first stop: the resurrection, baby! Slim's back from the grave like a fing phoenix on crack. He's basically flipping off the world and yelling, 'Look, bh, I ain't dead—I was just busy plotting my next big middle finger to society!' This ain't a gentle comeback; it's a blazing, unapologetic reentry into the mayhem.",
@@ -204,98 +203,125 @@ const albumData: AlbumData = {
       },
       {
         id: 3,
-      title: "Trouble",
-        spotifyId: "59151GHN7yr5g9B3bqlGdR?si=88315920d0dc4e79",
-      hasVideo: false,
-      story: "Slim it's getting worse what did deaf, blind people f***ing do to you.",
-      videoUrl: ""
+        title: "Trouble",
+        spotifyId: "59151GHN7yr5g9B3bqlGdR",
+        story: "A track delving into the challenges and obstacles in Eminem's life and career."
       },
       {
         id: 4,
         title: "Brand New Dance",
         spotifyId: "77pfjsq0gSZwO8bYVTVROo",
-      story: "Darling, I features Teezo Touchdown and explores the vulnerability of love. The heartfelt duet emphasizes the emotional intricacies of relationships, creating a poignant and relatable listening experience. The harmonies and lyrics delve into the highs and lows of love, making it a standout track on the album",
-      videoUrl: ""
+        story: "A fresh take on Eminem's signature style, showcasing new flows and techniques."
       },
       {
         id: 5,
         title: "Evil",
         spotifyId: "21LCotDEwR7R8qOnqPVzi9",
-      story: "Hey Jane shifts to a more serene and laid-back atmosphere. With smooth jazz influences and mellow vibes, this track offers a moment of tranquility and introspection. It's a space for listeners to unwind and reflect, providing a soothing counterpoint to the album's more energetic tracks.",
-      videoUrl: ""
+        story: "A dark and introspective track exploring the concept of evil and its manifestations."
       },
       {
         id: 6,
-        title: "All you got(skit)",
-        spotifyId: "6EnYCOweKFmEmeQScTdQuY",
-      story: "The darker tones of 'I Killed You present' a stark contrast, with hard-hitting lyrics and a gritty beat. This track exposes Tyler's inner conflicts and personal demons, creating a powerful and haunting listening experience. It's a raw and unfiltered look at the battles we all face within ourselves.",
-      videoUrl: ""
+        title: "All You Got",
+        spotifyId: "7y8n4wbMzsLMzTI6Qan02f",
+        story: "A skit that provides a moment of reflection and transition in the album."
       },
       {
         id: 7,
         title: "Lucifer",
-      spotifyId: "50No7LiVffAJCWIChZodmU",
-      story: "'Judge Judy' brings a unique twist with its courtroom theme, featuring witty wordplay and sharp production. Tyler navigates legal metaphors with clever lyricism, showcasing his storytelling abilities and his knack for turning everyday scenarios into compelling musical narratives.",
-      featuring: "Sly pyper",
-      videoUrl: ""
+        featuring: "Sly Pyper",
+        spotifyId: "50No7LiVffAJCWIChZodmU",
+        story: "A collaboration with Sly Pyper exploring themes of temptation and darkness."
       },
       {
         id: 8,
         title: "Antichrist",
         spotifyId: "0DIcssPpatAMqFXLZCxZMN",
-        hasVideo: false,
-      story: "'Sticky', featuring GloRilla, Lil Wayne, and Sexyy Red, is a star-studded collaboration that brings together powerful verses from each artist. The dynamic energy and impactful lyrics create a memorable and engaging track, emphasizing the strength found in unity and shared experiences.",
-      videoUrl: ""
+        story: "A powerful track delving into themes of rebellion and self-identity."
       },
       {
         id: 9,
         title: "Fuel",
         featuring: "JID",
-        hasVideo: true,
         spotifyId: "5In8B6Om5OKrhwBMB4tXSi",
-      story: "In 'Take Your Mask Off', Daniel Caesar and LaToiya Williams join Tyler to encourage authenticity and self-acceptance. The soulful duet is filled with beautiful harmonies and uplifting lyrics, inspiring listeners to embrace their true selves and live without fear of judgment.",
-      videoUrl: "https://www.youtube.com/embed/t5H_CewqpKA"
+        story: "An aggressive track featuring JID that serves as a metaphor for the energy and drive behind Eminem's career."
       },
       {
         id: 10,
         title: "Road Rage",
-      spotifyId: "0bBnrokPXtfwXQarqCu1Gz",
-      story: "'Tomorrow' offers a beacon of hope and optimism. With uplifting lyrics and a bright melody, this track shines a light on the possibilities of the future, urging listeners to look forward with positivity and confidence.",
-      videoUrl: ""
+        featuring: "Dem Jointz & Sly Pyper",
+        spotifyId: "0bBnrokPXtfwXQarqCu1Gz",
+        story: "A high-intensity track featuring Dem Jointz and Sly Pyper that channels the anger and frustration that has fueled Eminem's music throughout his career."
       },
       {
         id: 11,
         title: "Houdini",
         spotifyId: "1CDQzbCz4KSQxHe7LMEgRM",
         hasVideo: true,
-      story: "The collaboration with Santigold and ScHoolboy Q on 'Thought I Was Dead' addresses themes of resilience and survival. The powerful messages and strong performances from each artist create a compelling track that resonates with the struggles and triumphs of overcoming life's challenges.",
-      videoUrl: "https://www.youtube.com/embed/22tVWwmTie8"
+        videoUrl: "https://www.youtube.com/embed/22tVWwmTie8",
+        story: "A metaphorical track about disappearing acts and transformations, showcasing Eminem's signature wordplay."
       },
       {
         id: 12,
-        title: "Like Him",
-        featuring: "Lola Young",
-        spotifyId: "your_spotify_track_id",
-      story: "'Like Him', featuring Lola Young, celebrates identity and individuality. This track explores the importance of staying true to oneself and embracing personal differences, creating an empowering and thought-provoking song that encourages self-discovery and acceptance.",
-      videoUrl: ""
+        title: "Breaking News",
+        spotifyId: "0TDXeyH0hdiz0SZQo5w1nm",
+        story: "A skit that provides commentary on media and public perception."
       },
       {
         id: 13,
-        title: "Balloon",
-        featuring: "Doechii",
-        spotifyId: "your_spotify_track_id",
-      story: "'Balloon', with Doechii, adds a whimsical touch to the album. The playful lyrics and airy beat create a light and fun listening experience, showcasing Tyler's versatility and reminding listeners to find joy in the simpler moments of life.",
-      videoUrl: ""
+        title: "Guilty Conscience 2",
+        spotifyId: "3LkXOTWDwskwciQoARFDzu",
+        hasVideo: true,
+        story: "A sequel to the classic track, revisiting the concept of moral dilemmas.",
+        videoUrl:"https://www.youtube.com/embed/E3uMSsgd6N8"
       },
       {
         id: 14,
-        title: "I Hope You Find Your Way Home",
-        spotifyId: "your_spotify_track_id",
+        title: "Head Honcho",
+        featuring: "Ez Mil",
+        spotifyId: "7GXOXYdU950eRvk5rUAE8F",
+        story: "A collaboration with Ez Mil exploring themes of leadership and authority."
+      },
+      {
+        id: 15,
+        title: "Temporary",
+        featuring: "Skylar Grey", 
+        spotifyId: "6uMGHQvhZq8YyT4kdnG1L3",
         hasVideo: true,
-      story: "The album closes with 'I Hope You Find Your Way Home', a heartfelt and reflective track that leaves listeners with a sense of closure and introspection. Tyler's sincere delivery and poignant lyrics wrap up the album on an emotional note, inviting listeners to reflect on their own journeys and the importance of finding one's path.",
-      videoUrl: ""
-    }
-  ]
+        videoUrl:"https://www.youtube.com/embed/ZaK9Wi5ho0o",
+        story: "A vulnerable track featuring Skylar Grey, exploring the transient nature of life and relationships."
+      },
+      {
+        id: 16,
+        title: "Bad One",
+        featuring: "White Gold",
+        spotifyId: "15qnOSRK5HMWOgL5HURhrc",
+        story: "Another collaboration with White Gold, exploring themes of mistakes and redemption."
+      },
+      {
+        id: 17,
+        title: "Tobey",
+        featuring: "Big Sean & BabyTron",
+        spotifyId: "1ymWIr4E5x6xORlDO0bXlP",
+        hasVideo: true,
+        videoUrl: "https://www.youtube.com/embed/CanCZktm0TQ",
+        story: "A high-energy collaboration featuring Big Sean and BabyTron, with references to Spider-Man and comic book culture."
+      },
+      {
+        id: 18,
+        title: "Guess Who's Back",
+        spotifyId: "0cyN7uQYxTlqwgyh6rm1IH",
+        story: "A skit that marks the return of Eminem's iconic persona."
+      },
+      {
+        id: 19,
+        title: "Somebody Save Me",
+        featuring: "Jelly Roll",
+        spotifyId: "4HMUrFl8y6rQCzEbaGEkcj",
+        hasVideo: true,
+        videoUrl: "https://www.youtube.com/embed/Vwa0HenQMi4",
+        story: "A vulnerable track featuring Jelly Roll, exploring themes of redemption and salvation."
+      }
+    ]
 };
   
   
